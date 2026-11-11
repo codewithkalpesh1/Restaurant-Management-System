@@ -1,0 +1,648 @@
+
+/* COZY CORNER RESTAURANT - MAIN CSS */
+
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark: #101010;
+    --red: #a51d22;
+    --red2: #c52b30;
+    --green: #176b45;
+    --cream: #fff8e7;
+    --gold: #e7b85b;
+    --text: #242424;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header & Navigation */
+
+.site-header {
+    height: 78px;
+    background: #080808;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 14px #0003;
+}
+
+.brand,
+.footer-brand {
+    font-weight: bold;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.brand i,
+.footer-brand i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.site-header nav a {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.site-header nav a:hover {
+    color: #e34b4b;
+}
+
+.site-header nav .admin-link {
+    background: var(--red);
+    padding: 11px 16px;
+    border-radius: 4px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: 0;
+    font-size: 25px;
+}
+
+/* Hero Section */
+
+.hero {
+    height: 690px;
+    min-height: 540px;
+    background: url('img/bg-img.png') center / cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #000c, #0005);
+}
+
+.hero-copy {
+    position: relative;
+    margin-left: 10%;
+    max-width: 700px;
+}
+
+.eyebrow,
+.section-heading span {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: 70px;
+    line-height: 1.08;
+    margin: 18px 0;
+}
+
+.hero h1 em {
+    color: #f2c36b;
+}
+
+.hero p {
+    font-size: 22px;
+    color: #fff2d8;
+    margin-bottom: 32px;
+}
+
+/* Main Button */
+
+.btn-main {
+    display: inline-block;
+    border: 0;
+    background: var(--red);
+    color: #fff;
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: all 0.25s ease;
+}
+
+.btn-main:hover {
+    background: var(--green);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Common Section Styles */
+
+.section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.section-heading span {
+    color: var(--red);
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-size: 43px;
+    margin: 8px 0;
+    color: #171717;
+}
+
+/* About Section */
+
+.about-section {
+    background: #f6f3e9;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-pics {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.about-pics img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 6px 15px #0002;
+    transition: all 0.3s ease;
+}
+
+.about-pics img:hover {
+    transform: scale(1.03);
+}
+
+.about-copy h3 {
+    color: var(--red);
+    font-size: 23px;
+    margin: 14px 0 8px;
+}
+
+.about-copy p {
+    font: 17px/1.75 Arial, sans-serif;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* Menu Section */
+
+.menu-section {
+    background: #fff;
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.menu-tabs button {
+    border: 1px solid var(--green);
+    background: #fff;
+    color: var(--green);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.menu-tabs button.active,
+.menu-tabs button:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+/* Food Grid */
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 23px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* Food Card */
+
+.food-card {
+    border-radius: 7px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 24px #0002;
+}
+
+.food-card img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.food-info h3 {
+    font-size: 19px;
+    margin: 2px 0 8px;
+}
+
+.food-info strong {
+    color: var(--green);
+    font: bold 17px Arial, sans-serif;
+}
+
+/* Gallery Section */
+
+.gallery-section {
+    background: #f6f3e9;
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.025);
+}
+
+/* Reservation Section */
+
+.reservation-section {
+    background: #fff;
+}
+
+.reservation-wrap {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.form-panel,
+.contact-form {
+    background: var(--cream);
+    padding: 30px;
+    border: 1px solid #eadbb8;
+    border-radius: 7px;
+    box-shadow: 0 5px 22px #00000010;
+}
+
+.form-panel label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #d7cbb4;
+    border-radius: 3px;
+}
+
+.form-control:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 0.2rem #176b4520;
+}
+
+.reservation-photo {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+
+.contact-section {
+    background: #f6f3e9;
+}
+
+.contact-form {
+    max-width: 760px;
+    margin: 0 auto 35px;
+}
+
+/* Google Map */
+
+.map-frame {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 330px;
+    border: 0;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+
+footer {
+    background: #090909;
+    color: #ddd;
+    text-align: center;
+    padding: 48px 20px 22px;
+}
+
+.footer-brand {
+    font-size: 27px;
+}
+
+footer p {
+    color: #c6c6c6;
+    margin: 15px;
+}
+
+/* Social Media Icons */
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin: 22px;
+}
+
+.social a {
+    color: #fff;
+    background: var(--red);
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+/* Footer Links */
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+.footer-links a {
+    color: #ddd;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+footer small {
+    color: #999;
+}
+
+/* Toast Notification */
+
+.toast-message {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    background: var(--green);
+    color: white;
+    padding: 14px 22px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px #0003;
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design - Tablet */
+
+@media (max-width: 1000px) {
+
+    .site-header nav {
+        gap: 13px;
+    }
+
+    .site-header nav a {
+        font-size: 12px;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* Responsive Design - Mobile */
+
+@media (max-width: 760px) {
+
+    .site-header {
+        height: 68px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .site-header nav {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: #080808;
+        padding: 18px 6%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .site-header nav.open {
+        display: flex;
+    }
+
+    .site-header nav a {
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+    .site-header nav .admin-link {
+        padding: 12px;
+        margin-top: 7px;
+    }
+
+    /* Hero */
+
+    .hero {
+        height: 570px;
+    }
+
+    .hero-copy {
+        margin: 0 7%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Sections */
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    /* About & Reservation */
+
+    .about-grid,
+    .reservation-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .about-pics img {
+        height: 170px;
+    }
+
+    /* Menu */
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .food-card img {
+        height: 145px;
+    }
+
+    .food-info h3 {
+        font-size: 16px;
+    }
+
+    /* Gallery */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid img {
+        height: 160px;
+    }
+
+    /* Reservation Image */
+
+    .reservation-photo {
+        min-height: 260px;
+        max-height: 320px;
+    }
+
+}
+
+/* Responsive Design - Small Mobile */
+
+@media (max-width: 430px) {
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .food-card img {
+        height: 125px;
+    }
+
+    .food-info {
+        padding: 10px 6px;
+    }
+
+    .menu-tabs {
+        gap: 7px;
+    }
+
+    .menu-tabs button {
+        padding: 8px 13px;
+        font-size: 13px;
+    }
+
+    .gallery-grid img {
+        height: 125px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+}

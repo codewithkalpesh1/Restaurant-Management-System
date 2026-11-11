@@ -1,0 +1,447 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f2eb;
+    color: #242424;
+}
+
+/* Admin Login Page */
+
+.login-page {
+    min-height: 100vh;
+    background: linear-gradient(#090909bb, #090909bb),
+        url('img/bg-img.png') center/cover;
+    display: grid;
+    place-items: center;
+    padding: 25px;
+}
+
+.back-site {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-card {
+    width: min(440px, 100%);
+    background: #fff8e7;
+    padding: 38px;
+    border-radius: 9px;
+    box-shadow: 0 12px 40px #0005;
+    text-align: center;
+}
+
+.login-icon {
+    font-size: 34px;
+    color: #b42329;
+}
+
+.kicker {
+    letter-spacing: 4px;
+    color: #176b45;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 12px 0 5px;
+}
+
+.login-card h1 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+}
+
+.muted {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-card label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin: 13px 0 6px;
+}
+
+.form-control {
+    padding: 12px;
+    border: 1px solid #d8c9aa;
+}
+
+.admin-btn {
+    background: #a51d22;
+    color: #fff;
+    border: 0;
+    padding: 13px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.admin-btn:hover {
+    background: #176b45;
+    color: #fff;
+}
+
+.demo-note {
+    background: #f0ead9;
+    padding: 12px;
+    margin-top: 22px;
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.login-error {
+    color: #b42329;
+    font-size: 13px;
+    margin: 10px 0 0;
+    min-height: 16px;
+}
+
+/* Admin Header */
+
+.admin-header {
+    background: #090909;
+    color: white;
+    padding: 17px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-brand {
+    font: bold 22px Georgia;
+    color: white;
+    text-decoration: none;
+}
+
+.admin-brand i {
+    color: #e7b85b;
+    margin-right: 8px;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-actions a,
+.header-actions button {
+    color: white;
+    border: 1px solid #ffffff55;
+    padding: 9px 13px;
+    border-radius: 4px;
+    background: transparent;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.header-actions .logout {
+    background: #a51d22;
+    border: 0;
+}
+
+/* Admin Layout */
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 235px 1fr;
+    min-height: calc(100vh - 65px);
+}
+
+/* Sidebar */
+
+.sidebar {
+    background: #171717;
+    padding: 25px 14px;
+}
+
+.sidebar .side-label {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 0 12px 12px;
+}
+
+.side-btn {
+    width: 100%;
+    text-align: left;
+    color: #ddd;
+    background: transparent;
+    border: 0;
+    padding: 13px 12px;
+    border-radius: 5px;
+    margin: 3px 0;
+    font-size: 14px;
+}
+
+.side-btn i {
+    width: 25px;
+    color: #e7b85b;
+}
+
+.side-btn.active,
+.side-btn:hover {
+    background: #a51d22;
+    color: white;
+}
+
+/* Main Content */
+
+.admin-main {
+    padding: 30px;
+    min-width: 0;
+}
+
+.page-title {
+    font: bold 30px Georgia;
+    margin-bottom: 5px;
+}
+
+.page-sub {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Dashboard Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.stat-card,
+.panel {
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 0 3px 15px #0000000c;
+}
+
+.stat-card small {
+    color: #777;
+}
+
+.stat-card h2 {
+    margin: 9px 0 0;
+    font-size: 29px;
+    color: #176b45;
+}
+
+/* Panels */
+
+.panel {
+    margin-bottom: 20px;
+}
+
+.panel h3 {
+    font: bold 21px Georgia;
+    margin: 0 0 18px;
+}
+
+/* Tables */
+
+.table-wrap {
+    overflow: auto;
+}
+
+.table {
+    vertical-align: middle;
+    min-width: 600px;
+}
+
+.table thead th {
+    background: #f5f0e4;
+    white-space: nowrap;
+}
+
+.thumb {
+    width: 48px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Status Labels */
+
+.status {
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #fff0cf;
+    color: #875c00;
+    font-size: 12px;
+}
+
+.status.confirmed {
+    background: #dff4e7;
+    color: #176b45;
+}
+
+/* Action Buttons */
+
+.action-btn {
+    border: 0;
+    border-radius: 4px;
+    padding: 6px 9px;
+    margin: 2px;
+    font-size: 12px;
+}
+
+.edit {
+    background: #e7efff;
+    color: #2352a2;
+}
+
+.delete {
+    background: #fde6e6;
+    color: #a51d22;
+}
+
+/* Forms */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.form-grid label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.form-grid .form-control,
+.form-grid select {
+    padding: 10px;
+}
+
+/* Form Buttons */
+
+.primary-btn {
+    background: #176b45;
+    color: white;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.secondary-btn {
+    background: #eee;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+
+/* Utility Classes */
+
+.hidden {
+    display: none !important;
+}
+
+.empty {
+    text-align: center;
+    color: #777;
+    padding: 25px;
+}
+
+.notice {
+    background: #fff3cd;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-layout {
+        grid-template-columns: 190px 1fr;
+    }
+
+    .admin-main {
+        padding: 22px;
+    }
+
+}
+
+/* Responsive Design Mobile */
+
+@media (max-width: 650px) {
+
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: flex;
+        overflow: auto;
+        padding: 8px;
+    }
+
+    .sidebar .side-label {
+        display: none;
+    }
+
+    .side-btn {
+        white-space: nowrap;
+        width: auto;
+        padding: 10px;
+    }
+
+    .admin-main {
+        padding: 17px;
+    }
+
+    .stats {
+        gap: 9px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-card h2 {
+        font-size: 23px;
+    }
+
+    .admin-header {
+        padding: 13px;
+    }
+
+    .admin-brand {
+        font-size: 18px;
+    }
+
+    .header-actions a {
+        display: none;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+    }
+
+}

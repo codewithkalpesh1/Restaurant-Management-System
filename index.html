@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Corner | Restaurant</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/icons8-restaurant-80.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+
+        <a class="brand" href="#home">
+            <i class="fa-solid fa-utensils"></i>
+            COZY CORNER
+        </a>
+
+        <button class="nav-toggle" id="navToggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="mainNav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#menu">MENU</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#reservation">RESERVATION</a>
+            <a href="#contact">CONTACT</a>
+
+            <a class="admin-link" href="admin-login.html">
+                <i class="fa-solid fa-user-shield"></i>
+                ADMIN
+            </a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="hero-shade"></div>
+
+            <div class="hero-copy">
+
+                <span class="eyebrow">
+                    GOOD FOOD | GOOD MOOD
+                </span>
+
+                <h1>
+                    Welcome to<br>
+                    <em>Cozy Corner</em>
+                </h1>
+
+                <p>
+                    Best in the city. Made with love, served with warmth.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+
+            <div class="section-heading">
+                <span>OUR STORY</span>
+                <h2>About Us</h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-pics">
+
+                    <img src="img/about1.jpg" alt="Restaurant dining">
+                    <img src="img/about2.jpg" alt="Fresh food">
+                    <img src="img/about3.jpg" alt="Restaurant interior">
+                    <img src="img/about4.jpg" alt="Food served">
+
+                </div>
+
+                <div class="about-copy">
+
+                    <h3>Welcome to Our Cozy Corner</h3>
+
+                    <p>
+                        We are a place where comfort meets culinary delight.
+                        Enjoy a warm atmosphere, delicious food and memorable
+                        moments with friends and family.
+                    </p>
+
+                    <h3>Our Mission</h3>
+
+                    <p>
+                        Our mission is to serve high-quality food made with
+                        fresh ingredients. Every dish is prepared with care
+                        so every visit feels special.
+                    </p>
+
+                    <h3>Our Story</h3>
+
+                    <p>
+                        What started as a dream of creating a welcoming place
+                        has grown into a restaurant where every guest is
+                        valued. We look forward to serving you!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="section menu-section">
+
+            <div class="section-heading">
+                <span>FRESH & DELICIOUS</span>
+                <h2>Our Cozy Corner Menu</h2>
+            </div>
+
+            <div class="menu-tabs" id="menuTabs">
+
+                <button class="active" data-category="Breakfast">
+                    Breakfast
+                </button>
+
+                <button data-category="Lunch">
+                    Lunch
+                </button>
+
+                <button data-category="Dinner">
+                    Dinner
+                </button>
+
+                <button data-category="Dessert">
+                    Dessert
+                </button>
+
+                <button data-category="Cold Drinks">
+                    Cold Drinks
+                </button>
+
+            </div>
+
+            <div class="food-grid" id="menuGrid"></div>
+
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section gallery-section">
+
+            <div class="section-heading">
+                <span>MEMORIES & MOMENTS</span>
+                <h2>Our Gallery</h2>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <img src="img/about1.jpg" alt="Restaurant gallery">
+                <img src="img/about2.jpg" alt="Restaurant gallery">
+                <img src="img/about3.jpg" alt="Restaurant gallery">
+                <img src="img/about4.jpg" alt="Restaurant gallery">
+                <img src="img/our restro .jpg" alt="Restaurant gallery">
+                <img src="img/reserve bg.jpg" alt="Restaurant gallery">
+
+            </div>
+
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation" class="section reservation-section">
+
+            <div class="section-heading">
+                <span>BOOK YOUR TABLE</span>
+                <h2>Save Your Spot</h2>
+            </div>
+
+            <div class="reservation-wrap">
+
+                <form id="reservationForm" class="form-panel">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label>First Name</label>
+                            <input
+                                class="form-control"
+                                name="firstName"
+                                required
+                                pattern="[A-Za-z ]{2,}"
+                                placeholder="First name"
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Last Name</label>
+                            <input
+                                class="form-control"
+                                name="lastName"
+                                required
+                                pattern="[A-Za-z ]{2,}"
+                                placeholder="Last name"
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Email</label>
+                            <input
+                                class="form-control"
+                                type="email"
+                                name="email"
+                                required
+                                placeholder="name@example.com"
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Mobile Number</label>
+                            <input
+                                class="form-control"
+                                name="mobile"
+                                required
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                placeholder="10 digit mobile"
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Reservation Date</label>
+                            <input
+                                class="form-control"
+                                type="date"
+                                name="date"
+                                required
+                                id="reservationDate"
+                            >
+                        </div>
+
+                        <div class="col-md-6">
+                            <label>Reservation Time</label>
+                            <input
+                                class="form-control"
+                                type="time"
+                                name="time"
+                                required
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <label>Number of Guests</label>
+                            <input
+                                class="form-control"
+                                type="number"
+                                name="guests"
+                                min="1"
+                                max="20"
+                                required
+                                placeholder="Guests"
+                            >
+                        </div>
+
+                        <div class="col-12">
+                            <button class="btn-main" type="submit">
+                                Reserve a Table
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <img
+                    class="reservation-photo"
+                    src="img/reserve bg.jpg"
+                    alt="Dinner table"
+                >
+
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+                <span>GET IN TOUCH</span>
+                <h2>Contact Us</h2>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <input
+                            class="form-control"
+                            name="firstName"
+                            required
+                            pattern="[A-Za-z ]{2,}"
+                            placeholder="First Name"
+                        >
+                    </div>
+
+                    <div class="col-md-6">
+                        <input
+                            class="form-control"
+                            name="lastName"
+                            required
+                            pattern="[A-Za-z ]{2,}"
+                            placeholder="Last Name"
+                        >
+                    </div>
+
+                    <div class="col-12">
+                        <input
+                            class="form-control"
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="Email Address"
+                        >
+                    </div>
+
+                    <div class="col-12">
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            rows="5"
+                            minlength="10"
+                            required
+                            placeholder="Your Message..."
+                        ></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <button class="btn-main" type="submit">
+                            Send Message
+                        </button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- Google Map -->
+            <div class="map-frame">
+
+                <iframe
+                    title="Restaurant location"
+                    src="https://www.google.com/maps?q=Rajkot%20Gujarat&output=embed"
+                    loading="lazy"
+                ></iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+
+        <div class="footer-brand">
+            <i class="fa-solid fa-utensils"></i>
+            COZY CORNER
+        </div>
+
+        <p>
+            Good food, warm people and beautiful memories.
+        </p>
+
+        <div class="social">
+
+            <a href="#contact">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="#contact">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="#contact">
+                <i class="fab fa-twitter"></i>
+            </a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reservation">Reservation</a>
+            <a href="#contact">Contact</a>
+            <a href="admin-login.html">Admin</a>
+
+        </div>
+
+        <small>
+            © 2026 Cozy Corner Restaurant. All Rights Reserved.
+        </small>
+
+    </footer>
+
+    <!-- Toast Message -->
+    <div
+        id="toast"
+        class="toast-message"
+        role="status"
+    ></div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
